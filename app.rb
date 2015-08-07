@@ -13,10 +13,12 @@ get ('/') {
 
 get ('/find') {
   @word_count = params.fetch('phrase').word_count(params.fetch('word'))
-  @phrase = params.fetch('phrase').gsub(/#{params.fetch('word')}/i, '<span class="ko-highlight">' + params.fetch('word') + '</span>')
+  @phrase = params.fetch('phrase')
+  @word = params.fetch('word')
+  @phrase_output = @phrase.gsub(/#{@word}/i, '<span class="ko-highlight">' + @word + '</span>')
   @phrase_error = 0
   @word_error = 0
-  @word = params.fetch('word')
+
   if params.fetch('phrase') == ""
     @phrase_error = 1
   end
