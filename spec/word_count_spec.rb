@@ -26,4 +26,5 @@ describe("String#word_count") do
   it("returns the correct response on matching words with different case") do
     expect("this iS my phrase that is right".word_count("Is")).to(eq(2))
   end
+  
 end
