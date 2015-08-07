@@ -32,4 +32,12 @@ describe("Word Count Web Interface", {:type => :feature}) do
     click_button('Find')
     expect(page).to have_css('span.ko-highlight')
   end
+
+  it("returns to index page if ") do
+    visit('/')
+    fill_in('phrase', :with => 'this is my phrase')
+    fill_in('word', :with => '')
+    click_button('Find')
+    expect(page).to have_content('Enter the phrase you want to search.')
+  end
 end
