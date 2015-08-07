@@ -18,4 +18,9 @@ describe("String#word_count") do
   it("returns the correct response on matching words in a multiple word object") do
     expect("this is my phrase that is right".word_count("is")).to(eq(2))
   end
+
+  it("properly finds matches that are adjacent to punctuation") do
+    expect('This "is" my phrase. That it is.'.word_count("is")).to(eq(2))
+  end
+  
 end
