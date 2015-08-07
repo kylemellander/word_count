@@ -2,7 +2,13 @@ require ('rspec')
 require ('word_count')
 
 describe("String#word_count") do
-  it("it returns 0 if no argument given") do
-    expect("word's wordy, word.".word_count()).to(eq(0))
+
+  it("returns 0 if no argument given") do
+    expect("word".word_count()).to(eq(0))
   end
+
+  it("returns 0 if no words match") do
+    expect("word".word_count("new")).to(eq(0))
+  end
+  
 end
