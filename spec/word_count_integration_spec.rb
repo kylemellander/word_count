@@ -40,4 +40,13 @@ describe("Word Count Web Interface", {:type => :feature}) do
     click_button('Find')
     expect(page).to have_content('Enter the phrase you want to search.')
   end
+
+  it("returns to index page if phrase is not entered") do
+    visit('/')
+    fill_in('phrase', :with => '')
+    fill_in('word', :with => 'word')
+    click_button('Find')
+    expect(page).to have_content('Enter the phrase you want to search.')
+  end
+
 end

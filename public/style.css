@@ -35,3 +35,12 @@ h1 {
 .ko-highlight {
   background:#eeee66;
 }
+button {
+  margin-top:8px;
+}
+.error {
+  color: red;
+}
+.error input, .error textarea {
+  border:1px red solid;
+}
