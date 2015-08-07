@@ -49,4 +49,11 @@ describe("Word Count Web Interface", {:type => :feature}) do
     expect(page).to have_content('Enter the phrase you want to search.')
   end
 
+    it("returns error if the word to search for contains punctuation") do
+      visit('/')
+      fill_in('phrase', :with => "hi there i'm looking for you")
+      fill_in('word', :with => 'word.')
+      click_button('Find')
+      expect(page).to have_content('Enter the phrase you want to search.')
+    end
 end
