@@ -17,6 +17,10 @@ OR
 
 * Go directly to https://vast-lake-1308.herokuapp.com/ to test the app
 
+## Notes
+
+If you want to search only for whole words matching whole words (so it would not show positive for cat if the phrase was cathedral), then you can go to the whole word branch.
+
 ## Technologies Used
 
 Ruby, Sinatra, HTML, CSS, Capybara, Rspec
