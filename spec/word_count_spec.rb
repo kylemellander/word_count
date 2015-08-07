@@ -16,15 +16,15 @@ describe("String#word_count") do
   end
 
   it("returns the correct response on matching words in a multiple word object") do
-    expect("this is my phrase that is right".word_count("is")).to(eq(2))
+    expect("this is my phrase that is right".word_count("is")).to(eq(3))
   end
 
   it("properly finds matches that are adjacent to punctuation") do
-    expect('This "is" my phrase. That it is.'.word_count("is")).to(eq(2))
+    expect('This "is" my phrase. That it is.'.word_count("is")).to(eq(3))
   end
 
   it("returns the correct response on matching words with different case") do
-    expect("this iS my phrase that is right".word_count("Is")).to(eq(2))
+    expect("this iS my phrase that is right".word_count("Is")).to(eq(3))
   end
-  
+
 end
