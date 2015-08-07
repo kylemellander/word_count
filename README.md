@@ -17,6 +17,10 @@ OR
 
 * Go directly to https://vast-lake-1308.herokuapp.com/ to test the app
 
+## Other Versions
+
+If you want to search only by whole words (ie. phrase => "cathedral" and word => "cat" returns 0), then go to the whole words branch.
+
 ## Technologies Used
 
 Ruby, Sinatra, HTML, CSS, Capybara, Rspec
