@@ -13,6 +13,10 @@ This is a simple web app that allows the user to put in 2 inputs - 1 for a long 
 * Clone from git
 * In Console, run "ruby app.rb"
 
+OR
+
+* Go directly to https://vast-lake-1308.herokuapp.com/ to test the app
+
 ## Technologies Used
 
 Ruby, Sinatra, HTML, CSS, Capybara, Rspec
