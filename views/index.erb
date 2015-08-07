@@ -2,7 +2,7 @@
   <form action="/find">
     <div class="form-group required<% if @phrase_error >= 1 %> error<% end %>">
       <label for="phrase">Enter the phrase you want to search.</label>
-      <textarea id="phrase" name="phrase" class="form-control ko-form-phrase" placeholder="The phrase you want to search" rows="4"><% @phrase if @phrase_error == 0 %></textarea>
+      <textarea id="phrase" name="phrase" class="form-control ko-form-phrase" placeholder="The phrase you want to search" rows="4"><% if @phrase_error == 0 %><%= @phrase %><% end %></textarea>
     </div>
     <div class="form-group required<% if @word_error >= 1 %> error<% end %>">
       <label for="word">Find what word?</label>
