@@ -33,7 +33,7 @@ describe("Word Count Web Interface", {:type => :feature}) do
     expect(page).to have_css('span.ko-highlight')
   end
 
-  it("returns to index page if ") do
+  it("returns to index page if word is not entered") do
     visit('/')
     fill_in('phrase', :with => 'this is my phrase')
     fill_in('word', :with => '')
