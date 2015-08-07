@@ -16,4 +16,12 @@ describe("Word Count Web Interface", {:type => :feature}) do
     click_button('Find')
     expect(page).to have_content('match')
   end
+
+  it("successfully displays results if input is given") do
+    visit('/')
+    fill_in('phrase', :with => 'this is my phrase')
+    fill_in('word', :with => 'this')
+    click_button('Find')
+    expect(page).to have_content('1 match')
+  end
 end
