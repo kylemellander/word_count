@@ -4,7 +4,7 @@ class String
     match_result = 0
     phrase_words.each do |phrase_word|
       if phrase_word == word
-        match_result =+ 1
+        match_result += 1
       end
     end
     return match_result

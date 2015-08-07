@@ -12,6 +12,10 @@ describe("String#word_count") do
   end
 
   it("returns correct response when matches are found with the same object and argument") do
-    expect("word".word_count("word")).to(eq(1))s
+    expect("word".word_count("word")).to(eq(1))
+  end
+
+  it("returns the correct response on matching words in a multiple word object") do
+    expect("this is my phrase that is right".word_count("is")).to(eq(2))
   end
 end
