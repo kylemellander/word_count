@@ -13,9 +13,12 @@ get ('/find') {
   @word = params.fetch('word')
   @phrase_error = 0
   @word_error = 0
-  @word_error = 1 if @word == ""
-  @phrase_error = 1 if @phrase == ""
-  @word_error = 1 if @word == ""
+  if params.fetch('phrase') == ""
+    @phrase_error = 1
+  end
+  if @word == ""
+    @word_error = 1
+  end
   if @phrase_error != 1 && @word_error != 1
     erb(:word_count_results)
   else
