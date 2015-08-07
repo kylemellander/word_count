@@ -9,7 +9,14 @@ get ('/') {
 
 get ('/find') {
   @word_count = params.fetch('phrase').word_count(params.fetch('word'))
-  @display_word_count = params.fetch('phrase').gsub(params.fetch('word'), '<span class="ko-highlight">' + params.fetch('word') + '</span>')
+  @phrase = params.fetch('phrase').gsub(params.fetch('word'), '<span class="ko-highlight">' + params.fetch('word') + '</span>')
   @word = params.fetch('word')
-  erb(:word_count_results)
+
+  @phrase_error = 1 if @phrase == ""
+  @word_error = 1 if @word == ""
+  if @phrase_error != 1 && @word_error != 1
+    erb(:word_count_results)
+  else
+    erb(:index)
+  end
 }
