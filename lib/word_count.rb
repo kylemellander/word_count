@@ -1,5 +1,12 @@
 class String
   def word_count(word = nil)
-    phrase = self.gsub(/[^A-Za-z0-9\s\']/i, '')
+    phrase_words = self.gsub(/[^A-Za-z0-9\s\']/i, '').split()
+    match_result = 0
+    phrase_words.each do |phrase_word|
+      if phrase_word == word
+        match_result =+ 1
+      end
+    end
+    return match_result
   end
 end
