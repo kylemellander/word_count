@@ -56,4 +56,13 @@ describe("Word Count Web Interface", {:type => :feature}) do
       click_button('Find')
       expect(page).to have_content('Enter the phrase you want to search.')
     end
+
+    it("correctly highlights is case is not matched") do
+      visit('/')
+      fill_in('phrase', :with => "hi There i'm looking for you")
+      fill_in('word', :with => 'there')
+      click_button('Find')
+      expect(page).to have_css('span.ko-highlight')
+    end
+
 end
